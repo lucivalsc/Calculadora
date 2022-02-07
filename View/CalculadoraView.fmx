@@ -1,0 +1,783 @@
+object frmCalculadora: TfrmCalculadora
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 700
+  ClientWidth = 400
+  Fill.Color = claBlack
+  Fill.Kind = Solid
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnResize = FormResize
+  DesignerMasterStyle = 3
+  object Layout1: TLayout
+    Align = Top
+    Size.Width = 400.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Text1: TText
+      Align = Client
+      Size.Width = 400.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Calculadora'
+      TextSettings.Font.Size = 18.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claWhite
+    end
+  end
+  object txtVisor: TText
+    Align = Client
+    Margins.Left = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Size.Width = 380.000000000000000000
+    Size.Height = 130.000000000000000000
+    Size.PlatformDefault = False
+    Text = '0'
+    TextSettings.Font.Size = 45.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    TextSettings.FontColor = claWhite
+    TextSettings.HorzAlign = Trailing
+  end
+  object Layout2: TLayout
+    Align = Bottom
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Position.X = 5.000000000000000000
+    Position.Y = 240.000000000000000000
+    Size.Width = 390.000000000000000000
+    Size.Height = 455.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object Layout3: TLayout
+      Align = Top
+      Size.Width = 390.000000000000000000
+      Size.Height = 89.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      object Path1: TPath
+        Align = Left
+        Data.Path = {
+          0E00000000000000000040410000004002000000D544CF400000004002000000
+          00000040D544CF400200000000000040000040410200000000000040CB2E8C41
+          02000000D544CF400000B04102000000000040410000B04102000000CB2E8C41
+          0000B041020000000000B041CB2E8C41020000000000B0410000404102000000
+          0000B041D544CF4002000000CB2E8C4100000040020000000000404100000040
+          030000000000404100000040}
+        Fill.Color = xFF171717
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 8.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Margins.Bottom = 8.000000000000000000
+        Position.X = 8.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        WrapMode = Fit
+        object txtLimpar: TText
+          Align = Client
+          Size.Width = 73.000000000000000000
+          Size.Height = 73.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'C'
+          TextSettings.Font.Size = 25.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claTomato
+          OnClick = txtLimparClick
+        end
+      end
+      object pathBackSpace: TPath
+        Align = Left
+        Data.Path = {
+          0E00000000000000000040410000004002000000D544CF400000004002000000
+          00000040D544CF400200000000000040000040410200000000000040CB2E8C41
+          02000000D544CF400000B04102000000000040410000B04102000000CB2E8C41
+          0000B041020000000000B041CB2E8C41020000000000B0410000404102000000
+          0000B041D544CF4002000000CB2E8C4100000040020000000000404100000040
+          030000000000404100000040}
+        Fill.Color = xFF171717
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 8.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Margins.Bottom = 8.000000000000000000
+        Position.X = 97.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        WrapMode = Fit
+        OnClick = pathBackSpaceClick
+        object Path21: TPath
+          Align = VertCenter
+          Data.Path = {
+            1E000000000000000000B04100004040010000000000E0400000404002000000
+            85EBC9400000404002000000D7A3B8406666564002000000B81EAD40EC517840
+            01000000000000000000404101000000B81EAD4048E1A04102000000D7A3B840
+            B81EA5410200000085EBC9400000A841020000000000E0400000A84101000000
+            0000B0410000A8410200000029D6B8410000A841020000000000C04129D6A041
+            020000000000C04100009841010000000000C0410000A040020000000000C041
+            BC4E79400200000029D6B84100004040020000000000B0410000404000000000
+            00009841A47079410100000052B88C410000884101000000000060415C8F5641
+            010000005C8F2641000088410100000000001041A470794101000000A4704941
+            0000404101000000000010415C8F0641010000005C8F26410000E04001000000
+            00006041A47029410100000052B88C410000E04001000000000098415C8F0641
+            010000005C8F764100004041}
+          Fill.Color = claWhite
+          Margins.Left = 8.000000000000000000
+          Margins.Top = 8.000000000000000000
+          Margins.Right = 8.000000000000000000
+          Margins.Bottom = 8.000000000000000000
+          Position.X = 8.000000000000000000
+          Position.Y = 24.000000000000000000
+          Size.Width = 57.000000000000000000
+          Size.Height = 24.000000000000000000
+          Size.PlatformDefault = False
+          WrapMode = Fit
+          OnClick = pathBackSpaceClick
+        end
+      end
+      object Path3: TPath
+        Align = Left
+        Data.Path = {
+          0E00000000000000000040410000004002000000D544CF400000004002000000
+          00000040D544CF400200000000000040000040410200000000000040CB2E8C41
+          02000000D544CF400000B04102000000000040410000B04102000000CB2E8C41
+          0000B041020000000000B041CB2E8C41020000000000B0410000404102000000
+          0000B041D544CF4002000000CB2E8C4100000040020000000000404100000040
+          030000000000404100000040}
+        Fill.Color = xFF171717
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 8.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Margins.Bottom = 8.000000000000000000
+        Position.X = 186.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        WrapMode = Fit
+        object Text4: TText
+          Align = Client
+          Size.Width = 73.000000000000000000
+          Size.Height = 73.000000000000000000
+          Size.PlatformDefault = False
+          Text = '%'
+          TextSettings.Font.Size = 25.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = xFF047E42
+          OnClick = txtDivisaoClick
+        end
+      end
+      object Path4: TPath
+        Align = Left
+        Data.Path = {
+          0E00000000000000000040410000004002000000D544CF400000004002000000
+          00000040D544CF400200000000000040000040410200000000000040CB2E8C41
+          02000000D544CF400000B04102000000000040410000B04102000000CB2E8C41
+          0000B041020000000000B041CB2E8C41020000000000B0410000404102000000
+          0000B041D544CF4002000000CB2E8C4100000040020000000000404100000040
+          030000000000404100000040}
+        Fill.Color = xFF171717
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 8.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Margins.Bottom = 8.000000000000000000
+        Position.X = 275.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        WrapMode = Fit
+        object txtDivisao: TText
+          Align = Client
+          Size.Width = 73.000000000000000000
+          Size.Height = 73.000000000000000000
+          Size.PlatformDefault = False
+          Text = #247
+          TextSettings.Font.Size = 35.000000000000000000
+          TextSettings.FontColor = xFF047E42
+          OnClick = txtDivisaoClick
+        end
+      end
+    end
+    object Layout4: TLayout
+      Align = Top
+      Position.Y = 89.000000000000000000
+      Size.Width = 390.000000000000000000
+      Size.Height = 89.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      object Path5: TPath
+        Tag = 7
+        Align = Left
+        Data.Path = {
+          0E00000000000000000040410000004002000000D544CF400000004002000000
+          00000040D544CF400200000000000040000040410200000000000040CB2E8C41
+          02000000D544CF400000B04102000000000040410000B04102000000CB2E8C41
+          0000B041020000000000B041CB2E8C41020000000000B0410000404102000000
+          0000B041D544CF4002000000CB2E8C4100000040020000000000404100000040
+          030000000000404100000040}
+        Fill.Color = xFF171717
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 8.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Margins.Bottom = 8.000000000000000000
+        Position.X = 8.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        WrapMode = Fit
+        object Text6: TText
+          Align = Client
+          Size.Width = 73.000000000000000000
+          Size.Height = 73.000000000000000000
+          Size.PlatformDefault = False
+          Text = '7'
+          TextSettings.Font.Size = 25.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claWhite
+          OnClick = Text19Click
+        end
+      end
+      object Path6: TPath
+        Tag = 8
+        Align = Left
+        Data.Path = {
+          0E00000000000000000040410000004002000000D544CF400000004002000000
+          00000040D544CF400200000000000040000040410200000000000040CB2E8C41
+          02000000D544CF400000B04102000000000040410000B04102000000CB2E8C41
+          0000B041020000000000B041CB2E8C41020000000000B0410000404102000000
+          0000B041D544CF4002000000CB2E8C4100000040020000000000404100000040
+          030000000000404100000040}
+        Fill.Color = xFF171717
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 8.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Margins.Bottom = 8.000000000000000000
+        Position.X = 97.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        WrapMode = Fit
+        object Text7: TText
+          Align = Client
+          Size.Width = 73.000000000000000000
+          Size.Height = 73.000000000000000000
+          Size.PlatformDefault = False
+          Text = '8'
+          TextSettings.Font.Size = 25.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claWhite
+          OnClick = Text19Click
+        end
+      end
+      object Path7: TPath
+        Tag = 9
+        Align = Left
+        Data.Path = {
+          0E00000000000000000040410000004002000000D544CF400000004002000000
+          00000040D544CF400200000000000040000040410200000000000040CB2E8C41
+          02000000D544CF400000B04102000000000040410000B04102000000CB2E8C41
+          0000B041020000000000B041CB2E8C41020000000000B0410000404102000000
+          0000B041D544CF4002000000CB2E8C4100000040020000000000404100000040
+          030000000000404100000040}
+        Fill.Color = xFF171717
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 8.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Margins.Bottom = 8.000000000000000000
+        Position.X = 186.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        WrapMode = Fit
+        object Text8: TText
+          Align = Client
+          Size.Width = 73.000000000000000000
+          Size.Height = 73.000000000000000000
+          Size.PlatformDefault = False
+          Text = '9'
+          TextSettings.Font.Size = 25.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claWhite
+          OnClick = Text19Click
+        end
+      end
+      object Path8: TPath
+        Align = Left
+        Data.Path = {
+          0E00000000000000000040410000004002000000D544CF400000004002000000
+          00000040D544CF400200000000000040000040410200000000000040CB2E8C41
+          02000000D544CF400000B04102000000000040410000B04102000000CB2E8C41
+          0000B041020000000000B041CB2E8C41020000000000B0410000404102000000
+          0000B041D544CF4002000000CB2E8C4100000040020000000000404100000040
+          030000000000404100000040}
+        Fill.Color = xFF171717
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 8.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Margins.Bottom = 8.000000000000000000
+        Position.X = 275.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        WrapMode = Fit
+        object Text9: TText
+          Align = Client
+          Size.Width = 73.000000000000000000
+          Size.Height = 73.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'x'
+          TextSettings.Font.Size = 25.000000000000000000
+          TextSettings.FontColor = xFF047E42
+          OnClick = txtDivisaoClick
+        end
+      end
+    end
+    object Layout5: TLayout
+      Align = Top
+      Position.Y = 178.000000000000000000
+      Size.Width = 390.000000000000000000
+      Size.Height = 89.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object Path9: TPath
+        Align = Left
+        Data.Path = {
+          0E00000000000000000040410000004002000000D544CF400000004002000000
+          00000040D544CF400200000000000040000040410200000000000040CB2E8C41
+          02000000D544CF400000B04102000000000040410000B04102000000CB2E8C41
+          0000B041020000000000B041CB2E8C41020000000000B0410000404102000000
+          0000B041D544CF4002000000CB2E8C4100000040020000000000404100000040
+          030000000000404100000040}
+        Fill.Color = xFF171717
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 8.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Margins.Bottom = 8.000000000000000000
+        Position.X = 8.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        WrapMode = Fit
+        object Text10: TText
+          Align = Client
+          Size.Width = 73.000000000000000000
+          Size.Height = 73.000000000000000000
+          Size.PlatformDefault = False
+          Text = '4'
+          TextSettings.Font.Size = 25.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claWhite
+          OnClick = Text19Click
+        end
+      end
+      object Path10: TPath
+        Align = Left
+        Data.Path = {
+          0E00000000000000000040410000004002000000D544CF400000004002000000
+          00000040D544CF400200000000000040000040410200000000000040CB2E8C41
+          02000000D544CF400000B04102000000000040410000B04102000000CB2E8C41
+          0000B041020000000000B041CB2E8C41020000000000B0410000404102000000
+          0000B041D544CF4002000000CB2E8C4100000040020000000000404100000040
+          030000000000404100000040}
+        Fill.Color = xFF171717
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 8.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Margins.Bottom = 8.000000000000000000
+        Position.X = 97.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        WrapMode = Fit
+        object Text11: TText
+          Align = Client
+          Size.Width = 73.000000000000000000
+          Size.Height = 73.000000000000000000
+          Size.PlatformDefault = False
+          Text = '5'
+          TextSettings.Font.Size = 25.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claWhite
+          OnClick = Text19Click
+        end
+      end
+      object Path11: TPath
+        Align = Left
+        Data.Path = {
+          0E00000000000000000040410000004002000000D544CF400000004002000000
+          00000040D544CF400200000000000040000040410200000000000040CB2E8C41
+          02000000D544CF400000B04102000000000040410000B04102000000CB2E8C41
+          0000B041020000000000B041CB2E8C41020000000000B0410000404102000000
+          0000B041D544CF4002000000CB2E8C4100000040020000000000404100000040
+          030000000000404100000040}
+        Fill.Color = xFF171717
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 8.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Margins.Bottom = 8.000000000000000000
+        Position.X = 186.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        WrapMode = Fit
+        object Text12: TText
+          Align = Client
+          Size.Width = 73.000000000000000000
+          Size.Height = 73.000000000000000000
+          Size.PlatformDefault = False
+          Text = '6'
+          TextSettings.Font.Size = 25.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claWhite
+          OnClick = Text19Click
+        end
+      end
+      object Path12: TPath
+        Align = Left
+        Data.Path = {
+          0E00000000000000000040410000004002000000D544CF400000004002000000
+          00000040D544CF400200000000000040000040410200000000000040CB2E8C41
+          02000000D544CF400000B04102000000000040410000B04102000000CB2E8C41
+          0000B041020000000000B041CB2E8C41020000000000B0410000404102000000
+          0000B041D544CF4002000000CB2E8C4100000040020000000000404100000040
+          030000000000404100000040}
+        Fill.Color = xFF171717
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 8.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Margins.Bottom = 8.000000000000000000
+        Position.X = 275.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        WrapMode = Fit
+        object Text13: TText
+          Align = Client
+          Size.Width = 73.000000000000000000
+          Size.Height = 73.000000000000000000
+          Size.PlatformDefault = False
+          Text = '-'
+          TextSettings.Font.Size = 35.000000000000000000
+          TextSettings.FontColor = xFF047E42
+          OnClick = txtDivisaoClick
+        end
+      end
+    end
+    object Layout6: TLayout
+      Align = Top
+      Position.Y = 267.000000000000000000
+      Size.Width = 390.000000000000000000
+      Size.Height = 89.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object Path13: TPath
+        Align = Left
+        Data.Path = {
+          0E00000000000000000040410000004002000000D544CF400000004002000000
+          00000040D544CF400200000000000040000040410200000000000040CB2E8C41
+          02000000D544CF400000B04102000000000040410000B04102000000CB2E8C41
+          0000B041020000000000B041CB2E8C41020000000000B0410000404102000000
+          0000B041D544CF4002000000CB2E8C4100000040020000000000404100000040
+          030000000000404100000040}
+        Fill.Color = xFF171717
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 8.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Margins.Bottom = 8.000000000000000000
+        Position.X = 8.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        WrapMode = Fit
+        object Text14: TText
+          Align = Client
+          Size.Width = 73.000000000000000000
+          Size.Height = 73.000000000000000000
+          Size.PlatformDefault = False
+          Text = '1'
+          TextSettings.Font.Size = 25.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claWhite
+          OnClick = Text19Click
+        end
+      end
+      object Path14: TPath
+        Align = Left
+        Data.Path = {
+          0E00000000000000000040410000004002000000D544CF400000004002000000
+          00000040D544CF400200000000000040000040410200000000000040CB2E8C41
+          02000000D544CF400000B04102000000000040410000B04102000000CB2E8C41
+          0000B041020000000000B041CB2E8C41020000000000B0410000404102000000
+          0000B041D544CF4002000000CB2E8C4100000040020000000000404100000040
+          030000000000404100000040}
+        Fill.Color = xFF171717
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 8.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Margins.Bottom = 8.000000000000000000
+        Position.X = 97.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        WrapMode = Fit
+        object Text15: TText
+          Align = Client
+          Size.Width = 73.000000000000000000
+          Size.Height = 73.000000000000000000
+          Size.PlatformDefault = False
+          Text = '2'
+          TextSettings.Font.Size = 25.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claWhite
+          OnClick = Text19Click
+        end
+      end
+      object Path15: TPath
+        Align = Left
+        Data.Path = {
+          0E00000000000000000040410000004002000000D544CF400000004002000000
+          00000040D544CF400200000000000040000040410200000000000040CB2E8C41
+          02000000D544CF400000B04102000000000040410000B04102000000CB2E8C41
+          0000B041020000000000B041CB2E8C41020000000000B0410000404102000000
+          0000B041D544CF4002000000CB2E8C4100000040020000000000404100000040
+          030000000000404100000040}
+        Fill.Color = xFF171717
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 8.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Margins.Bottom = 8.000000000000000000
+        Position.X = 186.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        WrapMode = Fit
+        object Text16: TText
+          Align = Client
+          Size.Width = 73.000000000000000000
+          Size.Height = 73.000000000000000000
+          Size.PlatformDefault = False
+          Text = '3'
+          TextSettings.Font.Size = 25.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claWhite
+          OnClick = Text19Click
+        end
+      end
+      object Path16: TPath
+        Align = Left
+        Data.Path = {
+          0E00000000000000000040410000004002000000D544CF400000004002000000
+          00000040D544CF400200000000000040000040410200000000000040CB2E8C41
+          02000000D544CF400000B04102000000000040410000B04102000000CB2E8C41
+          0000B041020000000000B041CB2E8C41020000000000B0410000404102000000
+          0000B041D544CF4002000000CB2E8C4100000040020000000000404100000040
+          030000000000404100000040}
+        Fill.Color = xFF171717
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 8.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Margins.Bottom = 8.000000000000000000
+        Position.X = 275.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        WrapMode = Fit
+        object Text17: TText
+          Align = Client
+          Size.Width = 73.000000000000000000
+          Size.Height = 73.000000000000000000
+          Size.PlatformDefault = False
+          Text = '+'
+          TextSettings.Font.Size = 35.000000000000000000
+          TextSettings.FontColor = xFF047E42
+          OnClick = txtDivisaoClick
+        end
+      end
+    end
+    object Layout7: TLayout
+      Align = Top
+      Position.Y = 356.000000000000000000
+      Size.Width = 390.000000000000000000
+      Size.Height = 89.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Path17: TPath
+        Align = Left
+        Data.Path = {
+          0E00000000000000000040410000004002000000D544CF400000004002000000
+          00000040D544CF400200000000000040000040410200000000000040CB2E8C41
+          02000000D544CF400000B04102000000000040410000B04102000000CB2E8C41
+          0000B041020000000000B041CB2E8C41020000000000B0410000404102000000
+          0000B041D544CF4002000000CB2E8C4100000040020000000000404100000040
+          030000000000404100000040}
+        Enabled = False
+        Fill.Color = xFF171717
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 8.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Margins.Bottom = 8.000000000000000000
+        Position.X = 8.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        WrapMode = Fit
+        object Text18: TText
+          Align = Client
+          Size.Width = 73.000000000000000000
+          Size.Height = 73.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 25.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claWhite
+        end
+      end
+      object Path18: TPath
+        Align = Left
+        Data.Path = {
+          0E00000000000000000040410000004002000000D544CF400000004002000000
+          00000040D544CF400200000000000040000040410200000000000040CB2E8C41
+          02000000D544CF400000B04102000000000040410000B04102000000CB2E8C41
+          0000B041020000000000B041CB2E8C41020000000000B0410000404102000000
+          0000B041D544CF4002000000CB2E8C4100000040020000000000404100000040
+          030000000000404100000040}
+        Fill.Color = xFF171717
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 8.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Margins.Bottom = 8.000000000000000000
+        Position.X = 97.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        WrapMode = Fit
+        object Text19: TText
+          Align = Client
+          Size.Width = 73.000000000000000000
+          Size.Height = 73.000000000000000000
+          Size.PlatformDefault = False
+          Text = '0'
+          TextSettings.Font.Size = 25.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claWhite
+          OnClick = Text19Click
+        end
+      end
+      object Path19: TPath
+        Align = Left
+        Data.Path = {
+          0E00000000000000000040410000004002000000D544CF400000004002000000
+          00000040D544CF400200000000000040000040410200000000000040CB2E8C41
+          02000000D544CF400000B04102000000000040410000B04102000000CB2E8C41
+          0000B041020000000000B041CB2E8C41020000000000B0410000404102000000
+          0000B041D544CF4002000000CB2E8C4100000040020000000000404100000040
+          030000000000404100000040}
+        Fill.Color = xFF171717
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 8.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Margins.Bottom = 8.000000000000000000
+        Position.X = 186.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        WrapMode = Fit
+        object Text20: TText
+          Align = Client
+          Size.Width = 73.000000000000000000
+          Size.Height = 73.000000000000000000
+          Size.PlatformDefault = False
+          Text = ','
+          TextSettings.Font.Size = 25.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claWhite
+          OnClick = Text19Click
+        end
+      end
+      object Path20: TPath
+        Align = Left
+        Data.Path = {
+          0E00000000000000000040410000004002000000D544CF400000004002000000
+          00000040D544CF400200000000000040000040410200000000000040CB2E8C41
+          02000000D544CF400000B04102000000000040410000B04102000000CB2E8C41
+          0000B041020000000000B041CB2E8C41020000000000B0410000404102000000
+          0000B041D544CF4002000000CB2E8C4100000040020000000000404100000040
+          030000000000404100000040}
+        Fill.Color = xFF047E42
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 8.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Margins.Bottom = 8.000000000000000000
+        Position.X = 275.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        WrapMode = Fit
+        object txtIgual: TText
+          Align = Client
+          Size.Width = 73.000000000000000000
+          Size.Height = 73.000000000000000000
+          Size.PlatformDefault = False
+          Text = '='
+          TextSettings.Font.Size = 35.000000000000000000
+          TextSettings.FontColor = claWhite
+          OnClick = txtIgualClick
+        end
+      end
+    end
+  end
+  object Line1: TLine
+    Align = Bottom
+    LineType = Bottom
+    Opacity = 0.400000005960464500
+    Margins.Left = 20.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 20.000000000000000000
+    Margins.Bottom = 10.000000000000000000
+    Position.X = 20.000000000000000000
+    Position.Y = 220.000000000000000000
+    Size.Width = 360.000000000000000000
+    Size.Height = 5.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Color = claWhite
+  end
+  object txtMemoria: TText
+    Align = Top
+    Margins.Left = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 50.000000000000000000
+    Size.Width = 380.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 25.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    TextSettings.FontColor = claWhite
+    TextSettings.WordWrap = False
+    TextSettings.HorzAlign = Trailing
+  end
+end
